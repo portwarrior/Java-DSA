@@ -7,6 +7,7 @@ public class Greeting {
         String b=in.next();
         System.out.println(greetuser(b));
         greet();
+        in.close();
     }
 
     static String greetuser(String v){
