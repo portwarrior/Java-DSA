@@ -5,9 +5,9 @@ public class Questions {
         Scanner in=new Scanner(System.in);
 
         int i=in.nextInt();
-
-        boolean ans=isPrime(i);
-        System.out.println(ans);
+        //boolean ans=isPrime(i);
+        //System.out.println(ans);
+        System.out.println(isArmstrong(i));
         in.close();
     }
 
@@ -23,5 +23,26 @@ public class Questions {
                 c++;
             }
             return c*c> x;
+        }
+
+        static int armstrong(int a){
+            int sum=0;
+            while(a>0){
+                int x=a%10;
+                int z=cube(x);
+                sum+=z;
+                a=a/10;
+            }
+            return sum;
+        }
+
+        static boolean isArmstrong(int a){
+            if(a==armstrong(a)){
+                return true;
+            }
+            return false;
+        }
+        static int cube(int l){
+            return l*l*l;
         }
     }
