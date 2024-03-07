@@ -4,9 +4,11 @@ public class LinearSearch {
         //we will return the item if found but if not then we will return 1
         int[] abc={1,2,3,4,5,6,7,8,9};
         int target=7;
-        System.out.println("This is giving the index of the element "+searching(abc, target));
+        System.out.println("This is giving the index of the element: "+searching(abc, target));
         target=2;
-        System.out.println("This will return the element "+ searching2(abc, target));
+        System.out.println("This will return the element: "+ searching2(abc, target));
+        target=10;
+        System.out.println("This will return the boolean: "+ searching3(abc, target));
     }
 
     static int searching(int[] arr,int target){
