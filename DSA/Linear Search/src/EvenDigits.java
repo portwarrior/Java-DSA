@@ -1,5 +1,6 @@
 public class EvenDigits {
     public static void main(String[] args) {
+        //this is a question from leet code
         int[] arr={1,-12,1234,123,456,7899};//3
         System.out.println(EvenDigits(arr));
         System.out.println("This is the shorthand version of how to get the digits. So the answer is: " + digits2(123456));
