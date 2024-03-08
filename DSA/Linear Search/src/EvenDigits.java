@@ -1,20 +1,35 @@
 public class EvenDigits {
     public static void main(String[] args) {
-        int[] arr={1,12,1234,123,456,7899};//4
+        int[] arr={1,12,1234,123,456,7899};//3
         System.out.println(EvenDigits(arr));
     }
     static int EvenDigits(int[] arr){
         int count=0;
         for(int i:arr){
-            if(even(arr)){
+            if(even(i)){
                 count++;
             }
         }
         return count;
     }
 
-    static boolean even(int[] arr){
-        
+    static boolean even(int arr){
+        int numberOfDigits=digits(arr);
+        return numberOfDigits%2==0;
+        //below is the explanation of the above code
+        // if(numberOfDigits%2==0){
+        //     return true;
+        // }
+        // return false;        
+    }
+
+    static int digits(int arr){
+        int count=0;
+        while(arr>0){
+            count++;
+            arr=arr/10;
+        }
+        return count;
     }
 
 
