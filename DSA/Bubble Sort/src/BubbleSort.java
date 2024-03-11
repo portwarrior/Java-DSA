@@ -9,9 +9,9 @@ public class BubbleSort {
 
     static void bubbleSorting(int[] arr){
         //run the steps n-1 times
-
+        boolean swap;
         for(int i=0;i<arr.length;i++){
-
+            swap=false;
             //for each iteration the maximum item will come at the last index.
 
             for(int j=1;j<=arr.length-i-1;j++){
@@ -20,9 +20,17 @@ public class BubbleSort {
                     int temp=arr[j];
                     arr[j]=arr[j-1];
                     arr[j-1]=temp;
+                    swap=true;
                 }
             }
+
+            //if the swap didnt happen then we shuld break the code
+            if(swap==false){
+                break;
+            }
         }
+
+        
 
     }
 }
