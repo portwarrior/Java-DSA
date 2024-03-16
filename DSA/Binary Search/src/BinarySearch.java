@@ -22,6 +22,17 @@ public class BinarySearch {
             else if(target>arr[mid]){
                 start=mid+1;
             }
+            // for(int i=0;i<end;i++){
+            //     if(arr[i]==target){
+            //         return i;
+            //     }
+            //     if(mid<target){
+            //         start=mid+1;
+            //     }
+            //     if(mid>target){
+            //         end=end-1;
+            //     }
+            // }
             //else{
             //     return mid;
             // } removed this code and added in line 17 so that the time complexity reduces
