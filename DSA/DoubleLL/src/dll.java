@@ -19,6 +19,16 @@ public class dll {
         System.out.println();
         System.out.print("The next line prints function using the code that checks for head =null or not");
         list.display();
+        list.displayReverse();
+
+        Node node = list.head;
+        while (node != null && node.val != 4) {
+            node = node.next;
+        }
+        if (node != null) {
+            list.addMiddle(node, 220);
+            list.display();
+        }
     }
 
     Node head;
@@ -57,12 +67,25 @@ public class dll {
         // tail=newNodee;
     }
 
+    public void addMiddle(Node x,int z){
+        Node y=new Node(z);
+        y.next=x.next;
+        x.next=y;
+        y.prev=x;
+        if(y.next!=null){
+            y.next.prev=y;
+        }
+    }
+
     public void insertLast(int y){
         Node x=new Node(y);
         if(head==null){
             head=x;
         }
         x.next=null;
+        while(tail.next!=null){
+            tail=tail.next;
+        }
         tail.next=x;
         x.prev=tail;
         tail=x;
