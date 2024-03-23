@@ -42,6 +42,24 @@ public class BT {
             node.right=new Node(rightval);
             populate(scanner,node.right);
         }
+    }
 
+    public void display() {
+        display(root, "");
+    }
+
+    private void display(Node node, String indenting) {
+        if (node == null) {
+            return;
+        }
+        System.err.println(indenting + node.value);
+        display(node.left, indenting + "  ");
+        display(node.right, indenting + "  ");
+    }
+    public static void main(String[] args) {
+        Scanner x=new Scanner(System.in);
+        BT tree=new BT();
+        tree.populate(x);
+        tree.display();
     }
 }
