@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.src;
 
 public class Numbers {
     //waf that taskes a number and prints it.
@@ -7,7 +7,7 @@ public class Numbers {
     }
 
     static String printal(int x){
-        if(x<0|| x<x+5){
+        if(x<0|| x>10){ // Add x == x+5 condition to stop recursion
             return "invalid";
         }
 

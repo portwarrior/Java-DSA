@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.src;
 
 public class Recursion {
     public static void main(String[] args) {
