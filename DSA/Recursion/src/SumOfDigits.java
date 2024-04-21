@@ -1,8 +1,8 @@
 package Recursion.src;
 
-public class SumOfDigits {
+public class SumOfDigits  {
     public static void main(String[] args) {
-        System.out.println(sumOD(91));
+        System.out.println(sumOD(901));
     }
 
     static int sumOD(int n){
